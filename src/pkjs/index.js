@@ -726,7 +726,7 @@ function fetchWeather(latitude, longitude) {
         });
     } else {
         // source == 2
-        var baseurl = "https://api.darksky.net/forecast/" + apikey + "/" + latitude + "," + longitude + "?units=si&";
+        var baseurl = "https://api.openweathermap.org/data/3.0/onecall?appid" + apikey + "/" + latitude + "," + longitude + "?units=si&";
         var exclude = "exclude=minutely,alerts,flags";
         if (!load_rain) exclude += ",hourly";
         if (!load_lowhigh && !load_sun) exclude += ",daily";
