@@ -68,7 +68,7 @@ jobs:
       - name: install sdk
         run: if [ ! -d ~/.pebble-sdk ]; then mkdir -p ~/.pebble-sdk && touch ~/.pebble-sdk/NO_TRACKING && sdk/bin/pebble sdk install sdk/sdk-core-4.3.tar.bz2; fi
       - name: pebble-build
-        run: yes | sdk/bin/pebble build
+        run: ./configure ; make release
       - name: Upload PBW
         uses: actions/upload-artifact@v3
         with:
