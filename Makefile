@@ -43,7 +43,8 @@ build: initialize
 	# copy fonts
 	cp resources/fonts/nupe2.ttf config/fonts/nupe2.ttf
 	cp resources/fonts/fasubset.ttf config/fonts/fasubset.ttf
-	sdk/bin/pebble build
+	#sdk/bin/pebble build
+	pebble build
 
 initialize:
 	scripts/initialize.py
@@ -101,7 +102,8 @@ write_header:
 	@echo "#define $(GRAPHITE_CONFIG)" > src/config.h
 
 clean: clean_header
-	sdk/bin/pebble clean 2> /dev/null
+	#sdk/bin/pebble clean 2> /dev/null
+	pebble clean 2> /dev/null
 
 clean_header:
 	echo "" > src/config.h
